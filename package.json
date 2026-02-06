@@ -8,7 +8,10 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "lint": "eslint src/**/*.ts",
-    "test": "vitest"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "zendesk",
@@ -17,7 +20,9 @@
     "llm",
     "rag",
     "openai",
-    "claude"
+    "claude",
+    "pinecone",
+    "customer-support"
   ],
   "author": "ran2207",
   "license": "MIT",
@@ -32,9 +37,14 @@
   "devDependencies": {
     "@types/express": "^4.17.21",
     "@types/node": "^20.11.0",
+    "@types/supertest": "^6.0.2",
     "eslint": "^8.56.0",
+    "supertest": "^6.3.4",
     "tsx": "^4.7.0",
     "typescript": "^5.3.0",
     "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
